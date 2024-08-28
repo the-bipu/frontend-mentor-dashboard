@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.barlow {
+  font-family: "Barlow", sans-serif;
+}
+
+.heeto {
+  font-family: "Heeto", sans-serif;
+}
+
+.transitionVue {
+  transition: 0.2s ease-in-out 0s;
+}
+
+.innerShadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.link-btn {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.link-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.link-btn:hover::after {
+  width: 100%;
+}

@@ -1,8 +1,8 @@
 <template>
-    <section class="flex w-10/12 flex-col gap-6 items-center justify-center">
+    <section class="flex w-[80%] flex-col gap-6 items-center justify-center my-20">
 
-        <div class="flex flex-row flex-wrap items-start justify-between bg-white">
-            <div class="w-96 h-full mb-10 shadow rounded-2xl text-[#1c2022] border border-[#dbe5e6]"
+        <div class="flex flex-row flex-wrap items-start justify-between">
+            <div class="w-96 h-full mb-10 rounded-2xl text-[#1c2022] border border-[#dbe5e6]"
                 v-for="solution in solutions.slice().reverse()" v-bind:key="solution.id">
                 <!-- Project Preview -->
                 <section class="rounded-t-2xl overflow-hidden innerShadow">
@@ -10,17 +10,17 @@
                         alt={{solution.projectName}} />
                 </section>
 
-                <div class="p-6 flex text-left h-[300px]">
+                <div class="p-6 flex text-left h-[250px]">
                     <!-- Project Info -->
                     <section class="flex flex-col justify-between gap-4">
 
                         <div class="w-full h-auto flex flex-col gap-4">
                             <!-- Project Name -->
-                            <p class="barlow text-2xl font-medium text-[#1c2022] hover:underline transitionVue capitalize">{{
+                            <p class="barlow text-2xl font-medium text-[#1c2022] hover:underline transitionVue capitalize cursor-pointer">{{
                                 solution.projectName }}</p>
 
                             <!-- Project Describtion -->
-                            <section class="text-[#737373] text-lg barlow leading-7">
+                            <section class="text-[#737373] text-base barlow font-normal leading-7">
                                 <p>{{ solution.projectDescribtion }}</p>
                             </section>
                         </div>
@@ -35,7 +35,7 @@
 
                         <!-- Links -->
                         <section class="w-full h-auto flex flex-col">
-                            <ul class="flex flex-row gap-4">
+                            <ul class="flex flex-row gap-5">
                                 <li class="link-btn">
                                     <a v-bind:href="solution.liveLink" target="_blank">Live</a>
                                 </li>
@@ -67,7 +67,7 @@ export default {
             solutions: [
                 {
                     id: 1,
-                    projectName: "Stats Preview Card Component",
+                    projectName: "Stats Preview Card",
                     projectDescribtion:
                         "This is a great small challenge to help get you used to building to a design. There's no JS in this project, so you'll be able to focus on your HTML & CSS skills.",
                     projectStack: ["HTML", "CSS"],
@@ -109,7 +109,7 @@ export default {
                 },
                 {
                     id: 4,
-                    projectName: "Single price grid component",
+                    projectName: "Single price grid",
                     projectDescribtion:
                         "In this challenge, you will build out the pricing component to the designs provided. This is perfect for beginners and people who want to complete a smaller challenge.",
                     projectStack: ["HTML", "CSS"],
@@ -123,7 +123,7 @@ export default {
                 },
                 {
                     id: 5,
-                    projectName: "3-column preview card component",
+                    projectName: "3-column preview card",
                     projectDescribtion:
                         "This challenge is perfect if you're just getting started. The shift between the layouts will be a nice test if you're new to building responsive projects.",
                     projectStack: ["HTML", "CSS"],

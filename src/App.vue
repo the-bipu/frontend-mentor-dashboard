@@ -1,19 +1,22 @@
 <template>
-  <div class="w-full h-auto flex flex-col items-center justify-center">
+  <div class="w-full h-auto flex flex-col items-center justify-center bg-[#fafafa]">
     <NavbarCmp />
     <MainBody />
+    <FooterCmp />
   </div>
 </template>
 
 <script>
 import NavbarCmp from './components/NavbarCmp.vue';
 import MainBody from './components/MainBody.vue';
+import FooterCmp from './components/FooterCmp.vue';
 
 export default {
   name: 'App',
   components: {
     NavbarCmp,
     MainBody,
+    FooterCmp,
   }
 }
 </script>

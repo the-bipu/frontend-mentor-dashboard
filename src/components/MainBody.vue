@@ -1,7 +1,12 @@
 <template>
     <section class="flex w-[80%] flex-col gap-6 items-center justify-center my-20">
 
+        <div
+            class="flex flex-row justify-between items-center w-full h-auto text-[28px] text-black font-semibold barlow">
+            <span>My Challenges</span>
+        </div>
         <div class="flex flex-row flex-wrap items-start justify-between">
+
             <div class="w-96 h-full mb-10 rounded-2xl text-[#1c2022] border border-[#dbe5e6]"
                 v-for="solution in solutions.slice().reverse()" v-bind:key="solution.id">
                 <!-- Project Preview -->
@@ -10,14 +15,26 @@
                         alt={{solution.projectName}} />
                 </section>
 
-                <div class="p-6 flex text-left h-[250px]">
+                <div class="p-6 flex text-left h-[280px]">
                     <!-- Project Info -->
                     <section class="flex flex-col justify-between gap-4">
 
-                        <div class="w-full h-auto flex flex-col gap-4">
+                        <div class="w-full h-auto flex flex-col">
                             <!-- Project Name -->
-                            <p class="barlow text-2xl font-medium text-[#1c2022] hover:underline transitionVue capitalize cursor-pointer">{{
-                                solution.projectName }}</p>
+                            <p
+                                class="barlow text-2xl font-medium text-[#1c2022] hover:underline transitionVue capitalize cursor-pointer mb-4">
+                                {{
+                                    solution.projectName }}</p>
+
+                            <!-- Project Stack -->
+                            <section class="flex flex-wrap gap-3 mb-1">
+                                <p v-for="(projectStack, index) in solution.projectStack" v-bind:class="projectStack"
+                                    v-bind:key="projectStack" :style="{
+                                        color: index === 0 ? '#6abecd' : index === 1 ? '#3e54a3' : index === 2 ? '#cf6390' : ''
+                                    }" class="font-semibold text-base barlow uppercase">
+                                    {{ projectStack }}
+                                </p>
+                            </section>
 
                             <!-- Project Describtion -->
                             <section class="text-[#737373] text-base barlow font-normal leading-7">
@@ -25,13 +42,6 @@
                             </section>
                         </div>
 
-                        <!-- Project Stack -->
-                        <!-- <section class="flex flex-wrap gap-2">
-                            <p class="project-stack" v-for="projectStack in solution.projectStack"
-                                v-bind:class="projectStack" v-bind:key="projectStack">
-                                {{ projectStack }}
-                            </p>
-                        </section> -->
 
                         <!-- Links -->
                         <section class="w-full h-auto flex flex-col">
@@ -52,7 +62,7 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 </template>
 
@@ -67,25 +77,25 @@ export default {
             solutions: [
                 {
                     id: 1,
-                    projectName: "Stats Preview Card",
+                    projectName: "Job Listing with filtering",
                     projectDescribtion:
-                        "This is a great small challenge to help get you used to building to a design. There's no JS in this project, so you'll be able to focus on your HTML & CSS skills.",
-                    projectStack: ["HTML", "CSS"],
-                    projectPreview: require("@/assets/images/stats-preview-card-component.jpeg"),
+                        "In this challenge, you'll be using JavaScript to filter out jobs based on selected categories. We provide a local JSON file to help you practice working with JSON data.",
+                    projectStack: ["Aurelia Js", "Tailwind", "Typescript"],
+                    projectPreview: require("@/assets/preview/job-listing.jpg"),
                     liveLink:
                         "",
                     projectLink:
                         "",
                     repoLink:
-                        "https://github.com/catherineisonline/stats-preview-card-component-frontendmentor",
+                        "",
                 },
                 {
                     id: 2,
-                    projectName: "Order summary component",
+                    projectName: "Agency landing page",
                     projectDescribtion:
-                        "A perfect project for newbies who are starting to build confidence with layouts!",
-                    projectStack: ["HTML", "CSS"],
-                    projectPreview: require("@/assets/images/order-summary-component.jpeg"),
+                        "This challenge will be a perfect test of your layout and responsive skills. There's a tiny bit of JS for the mobile menu, but the focus is HTML & CSS.",
+                    projectStack: ["Svelte", "Tailwind", "Typescript"],
+                    projectPreview: require("@/assets/preview/agency-landing.jpg"),
                     liveLink:
                         "",
                     projectLink:
@@ -95,11 +105,11 @@ export default {
                 },
                 {
                     id: 3,
-                    projectName: "Profile card component",
+                    projectName: "URL shortening API",
                     projectDescribtion:
                         "This is a perfect challenge to test your layout skills. The card layout doesn't shift, so it's also great for those that haven't dived into responsive websites yet!",
-                    projectStack: ["HTML", "CSS"],
-                    projectPreview: require("@/assets/images/profile-card-component.jpeg"),
+                    projectStack: ["Vue Js", "Tailwind", "Node Js"],
+                    projectPreview: require("@/assets/preview/url-shortening.jpg"),
                     liveLink:
                         "",
                     projectLink:
@@ -109,11 +119,11 @@ export default {
                 },
                 {
                     id: 4,
-                    projectName: "Single price grid",
+                    projectName: "IP Address Tracker",
                     projectDescribtion:
-                        "In this challenge, you will build out the pricing component to the designs provided. This is perfect for beginners and people who want to complete a smaller challenge.",
-                    projectStack: ["HTML", "CSS"],
-                    projectPreview: require("@/assets/images/single-price-grid-component.jpeg"),
+                        "In this challenge, you'll be using two separate APIs together to create an IP Address Tracking app.",
+                    projectStack: ["Angular Js", "API"],
+                    projectPreview: require("@/assets/preview/ip-tracker.jpg"),
                     liveLink:
                         "",
                     projectLink:
@@ -123,11 +133,11 @@ export default {
                 },
                 {
                     id: 5,
-                    projectName: "3-column preview card",
+                    projectName: "Room Homepage",
                     projectDescribtion:
-                        "This challenge is perfect if you're just getting started. The shift between the layouts will be a nice test if you're new to building responsive projects.",
-                    projectStack: ["HTML", "CSS"],
-                    projectPreview: require("@/assets/images/3-column-preview-card-component.jpeg"),
+                        "This small homepage challenge packs a big punch to test your layout skills. There's also a slider in there to add a JS layer for extra practice.",
+                    projectStack: ["React Js", "Tailwind"],
+                    projectPreview: require("@/assets/preview/room-homepage.jpg"),
                     liveLink:
                         "",
                     projectLink:
@@ -137,11 +147,11 @@ export default {
                 },
                 {
                     id: 6,
-                    projectName: "Social proof section",
+                    projectName: "Advice generator app",
                     projectDescribtion:
-                        "This project will test your layout skills. If you're starting to get confident with Flexbox or Grid, this will provide a nice challenge!",
-                    projectStack: ["HTML", "CSS"],
-                    projectPreview: require("@/assets/images/social-proof-section.jpeg"),
+                        "The perfect project if you're learning how to interact with 3rd-party APIs. This challenge uses the Advice Slip API to generate random quotes of advice.",
+                    projectStack: ["Node Js", "Express Js", "API"],
+                    projectPreview: require("@/assets/preview/advice-generator.jpg"),
                     liveLink:
                         "",
                     projectLink:

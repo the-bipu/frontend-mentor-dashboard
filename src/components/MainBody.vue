@@ -1,14 +1,14 @@
 <template>
-    <section class="flex w-[80%] flex-col gap-6 items-center justify-center my-20">
+    <section class="flex w-[80%] flex-col gap-6 items-center justify-center mt-12 mb-20">
 
         <div
-            class="flex flex-row justify-between items-center w-full h-auto text-[28px] text-black font-semibold barlow">
+            class="flex flex-row justify-between items-center w-full h-auto text-[28px] text-black font-medium barlow">
             <span>My Challenges</span>
         </div>
         <div class="flex flex-row flex-wrap items-start justify-between">
 
             <div class="w-96 h-full mb-10 rounded-2xl text-[#1c2022] border border-[#dbe5e6]"
-                v-for="solution in solutions.slice().reverse()" v-bind:key="solution.id">
+                v-for="solution in solutions.slice()" v-bind:key="solution.id">
                 <!-- Project Preview -->
                 <section class="rounded-t-2xl overflow-hidden innerShadow">
                     <img class="rounded-t-2xl hover:scale-110 transitionVue" v-bind:src="solution.projectPreview"
@@ -50,10 +50,10 @@
                                     <a v-bind:href="solution.liveLink" target="_blank">Live</a>
                                 </li>
                                 <li class="link-btn">
-                                    <a v-bind:href="solution.repoLink" target="_blank">Repo</a>
+                                    <a v-bind:href="solution.repoLink" target="_blank">Code</a>
                                 </li>
                                 <li class="link-btn">
-                                    <a v-bind:href="solution.projectLink" target="_blank">Try Out</a>
+                                    <a v-bind:href="solution.projectLink" target="_blank">Solution</a>
                                 </li>
                             </ul>
                         </section>
@@ -83,11 +83,11 @@ export default {
                     projectStack: ["Aurelia Js", "Tailwind", "Typescript"],
                     projectPreview: require("@/assets/preview/job-listing.jpg"),
                     liveLink:
-                        "",
+                        "https://job-listing-aurelia.vercel.app/",
                     projectLink:
-                        "",
+                        "https://www.frontendmentor.io/solutions/responsive-job-listing-application-using-aurelia-js-yqj4KDWLlw",
                     repoLink:
-                        "",
+                        "https://github.com/the-bipu/job-listing-aurelia",
                 },
                 {
                     id: 2,
@@ -97,11 +97,11 @@ export default {
                     projectStack: ["Svelte", "Tailwind", "Typescript"],
                     projectPreview: require("@/assets/preview/agency-landing.jpg"),
                     liveLink:
-                        "",
+                        "https://sunnyside-landing-page-svelte.vercel.app/",
                     projectLink:
-                        "",
+                        "https://www.frontendmentor.io/solutions/responsive-sunnyside-landing-page-using-svelte-QTuHVNk9rY",
                     repoLink:
-                        "",
+                        "https://github.com/the-bipu/sunnyside-page-svelte",
                 },
                 {
                     id: 3,
@@ -111,11 +111,11 @@ export default {
                     projectStack: ["Vue Js", "Tailwind", "Node Js"],
                     projectPreview: require("@/assets/preview/url-shortening.jpg"),
                     liveLink:
-                        "",
+                        "https://url-shortening-vuejs.vercel.app/",
                     projectLink:
-                        "",
+                        "https://www.frontendmentor.io/solutions/resposive-url-shortening-application-using-vuejs-and-tailwind-css-9Nngh-s1iZ",
                     repoLink:
-                        "",
+                        "https://github.com/the-bipu/url-shortening-vue",
                 },
                 {
                     id: 4,
@@ -125,11 +125,11 @@ export default {
                     projectStack: ["Angular Js", "API"],
                     projectPreview: require("@/assets/preview/ip-tracker.jpg"),
                     liveLink:
-                        "",
+                        "https://ip-tracker-angular-beryl.vercel.app/",
                     projectLink:
-                        "",
+                        "https://www.frontendmentor.io/solutions/responsive-ip-tracker-project-using-angular-XIAzdXPUpB",
                     repoLink:
-                        "",
+                        "https://github.com/the-bipu/ip-tracker-angular",
                 },
                 {
                     id: 5,
@@ -139,11 +139,11 @@ export default {
                     projectStack: ["React Js", "Tailwind"],
                     projectPreview: require("@/assets/preview/room-homepage.jpg"),
                     liveLink:
-                        "",
+                        "https://room-homepage-lovat.vercel.app/",
                     projectLink:
-                        "",
+                        "https://www.frontendmentor.io/solutions/responsive-room-homepage-website-vYQqVPQ1Bn",
                     repoLink:
-                        "",
+                        "https://github.com/the-bipu/frontend-mentor-projects/tree/main/Room_HomePage",
                 },
                 {
                     id: 6,
@@ -153,11 +153,137 @@ export default {
                     projectStack: ["Node Js", "Express Js", "API"],
                     projectPreview: require("@/assets/preview/advice-generator.jpg"),
                     liveLink:
-                        "",
+                        "https://advice-generator-app-indol-five.vercel.app/",
                     projectLink:
-                        "",
+                        "https://www.frontendmentor.io/solutions/responsive-advice-generator-app-using-node-and-express-ql6c1SLTZp",
                     repoLink:
-                        "",
+                        "https://github.com/the-bipu/Advice-Generator-App",
+                },
+                {
+                    id: 7,
+                    projectName: "Todo app",
+                    projectDescribtion:
+                        "The classic todo app with a few twists! This app includes a dark/light theme toggle and drag & drop reordering for anyone wanting an extra test.",
+                    projectStack: ["React Js", "Express Js", "MongoDb"],
+                    projectPreview: require("@/assets/preview/todo-app.jpg"),
+                    liveLink:
+                        "https://todo-site-react.vercel.app/",
+                    projectLink:
+                        "https://www.frontendmentor.io/solutions/responsive-todo-list-app-using-react-sass-and-sanity-5vufVqoOtv",
+                    repoLink:
+                        "https://github.com/the-bipu/todo-app",
+                },
+                {
+                    id: 8,
+                    projectName: "Intro component with sign-up form",
+                    projectDescribtion:
+                        "Practice building out a sign-up form complete with client-side validation using JavaScript.",
+                    projectStack: ["React Js", "Vanilla CSS", "Bootstrap"],
+                    projectPreview: require("@/assets/preview/intro-signup.jpg"),
+                    liveLink:
+                        "https://signup-intro-component.netlify.app/",
+                    projectLink:
+                        "https://www.frontendmentor.io/solutions/responsive-signup-page-using-react-js-bootstrap-kh-vyJynXB",
+                    repoLink:
+                        "https://github.com/the-bipu/Frontend-Mentor-Projects/tree/main/SignUp-Form-Component",
+                },
+                {
+                    id: 9,
+                    projectName: "Base Apparel coming soon",
+                    projectDescribtion:
+                        "This layout looks simple enough, but there are some interesting details to it that will test your CSS skills. You'll also get to practice basic form validation.",
+                    projectStack: ["React Js", "Vanilla CSS"],
+                    projectPreview: require("@/assets/preview/base-apparel.jpg"),
+                    liveLink:
+                        "https://apparel-coming-soon-page-react.vercel.app/",
+                    projectLink:
+                        "https://www.frontendmentor.io/solutions/responsive-apparel-coming-soon-page-using-react-and-bootstrap-H1xU9LzyHJ",
+                    repoLink:
+                        "https://github.com/the-bipu/Frontend-Mentor-Projects/tree/main/Apparel-Coming-Soon-Page/current-files",
+                },
+                {
+                    id: 10,
+                    projectName: "Ping single column coming soon",
+                    projectDescribtion:
+                        "This challenge is great for beginners and offers a chance to practice basic client-side form validation.",
+                    projectStack: ["React Js", "Vanilla CSS"],
+                    projectPreview: require("@/assets/preview/ping-page.jpg"),
+                    liveLink:
+                        "https://ping-coming-soon-page-react.netlify.app/",
+                    projectLink:
+                        "https://www.frontendmentor.io/solutions/responsive-ping-coming-soon-page-using-react-ye5a57VsEd",
+                    repoLink:
+                        "https://github.com/the-bipu/Frontend-Mentor-Projects/tree/main/Ping-Coming-Soon-Page",
+                },
+                {
+                    id: 11,
+                    projectName: "Age calculator app",
+                    projectDescribtion:
+                        "This challenge is designed to sharpen your JavaScript and form validation skills. Working with dates in JavaScript can be tricky, so this will be a nice test!",
+                    projectStack: ["React Js", "Vanilla CSS"],
+                    projectPreview: require("@/assets/preview/age-cal.jpg"),
+                    liveLink:
+                        "https://age-calculator-module.netlify.app/",
+                    projectLink:
+                        "https://www.frontendmentor.io/solutions/responsive-age-calculator-app-using-react-js-pTsfTuUi98",
+                    repoLink:
+                        "https://github.com/the-bipu/Age-Calculator-App",
+                },
+                {
+                    id: 12,
+                    projectName: "FAQ accordion card",
+                    projectDescribtion:
+                        "In this challenge, you'll be building out an FAQ accordion. This is an extremely common front-end pattern, so it's a great opportunity to get some practice in!",
+                    projectStack: ["JQuery", "Bootstrap"],
+                    projectPreview: require("@/assets/preview/faqs-page.jpg"),
+                    liveLink:
+                        "https://faq-accordion-the-bipu.netlify.app/",
+                    projectLink:
+                        "https://www.frontendmentor.io/solutions/responsive-faq-accordion-card-using-flexbox-grid-fUSnZS8N4s",
+                    repoLink:
+                        "https://github.com/the-bipu/Frontend-Mentor-Projects/tree/main/FAQ-Accordion",
+                },
+                {
+                    id: 13,
+                    projectName: "Interactive rating component",
+                    projectDescribtion:
+                        "This is a nice, small project to practice handling user interactions and updating the DOM. Perfect for anyone who has learned the basics of JavaScript!",
+                    projectStack: ["JQuery", "Vanilla CSS"],
+                    projectPreview: require("@/assets/preview/rating-component.jpg"),
+                    liveLink:
+                        "https://rating-component-the-bipu.netlify.app/",
+                    projectLink:
+                        "https://www.frontendmentor.io/solutions/responsive-rating-component-using-jquery-flexbox-and-grid-7zhyLMmMAG",
+                    repoLink:
+                        "https://github.com/the-bipu/Frontend-Mentor-Projects/tree/main/Rating-Component-Vanilla",
+                },
+                {
+                    id: 14,
+                    projectName: "Testimonials grid section",
+                    projectDescribtion:
+                        "This challenge will be perfect practice for anyone wanting to test their CSS Grid skills. Grid is such a powerful addition to CSS, so it's worth getting to grips with it!",
+                    projectStack: ["React Js", "Vanilla CSS"],
+                    projectPreview: require("@/assets/preview/testimonial.jpg"),
+                    liveLink:
+                        "https://testimonial-grid-challenge-thebipu.vercel.app/",
+                    projectLink:
+                        "https://www.frontendmentor.io/solutions/fully-responsive-testimonial-grid-card-using-react-grid-and-flexbox-R7cfvFXN5p",
+                    repoLink:
+                        "https://github.com/the-bipu/Frontend-Mentor-Projects/tree/main/Testimonial-Grid-Component/current-files",
+                },
+                {
+                    id: 15,
+                    projectName: "NFT preview card component",
+                    projectDescribtion:
+                        "This HTML & CSS only challenge is perfect for anyone just starting out or anyone wanting a small project to play around with.",
+                    projectStack: ["HTML", "Vanilla CSS"],
+                    projectPreview: require("@/assets/preview/nft-card.jpg"),
+                    liveLink:
+                        "https://nft-card-the-bipu.netlify.app/",
+                    projectLink:
+                        "https://www.frontendmentor.io/solutions/responsive-nft-preview-card-using-grid-and-flexbox-iqalU54NH7",
+                    repoLink:
+                        "https://github.com/the-bipu/Frontend-Mentor-Projects/tree/main/NFT-Card-Component",
                 },
             ],
         };

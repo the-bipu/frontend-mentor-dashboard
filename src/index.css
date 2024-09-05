@@ -48,3 +48,15 @@
 .link-btn:hover::after {
   width: 100%;
 }
+
+.main-menu {
+  display: none;
+}
+
+.show-menu {
+  display: flex;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}

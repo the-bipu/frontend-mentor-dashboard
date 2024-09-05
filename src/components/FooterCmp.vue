@@ -5,12 +5,7 @@
             <div class="flex flex-row gap-4 barlow">
                 <img src="../assets/logo-desktop.svg" alt="" class="h-9 p-1">
             </div>
-            <div class="flex flex-row gap-2.5 items-center justify-center">
-                <img src="../assets/profile.jpeg" alt="" class="w-10 h-10 rounded-full cursor-pointer">
-                <img src="../assets/profile.jpeg" alt="" class="w-10 h-10 rounded-full cursor-pointer">
-                <img src="../assets/profile.jpeg" alt="" class="w-10 h-10 rounded-full cursor-pointer">
-                <img src="../assets/profile.jpeg" alt="" class="w-10 h-10 rounded-full cursor-pointer">
-            </div>
+            <a href="mailto:thebippu@gmail.com" target="_blank" class="flex flex-row gap-2.5 items-center justify-center cursor-pointer">Only Mail</a>
 
         </header>
     </div>
